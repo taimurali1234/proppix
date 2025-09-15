@@ -16,7 +16,7 @@ const Hero = () => {
       <Header />
 
       {/* Hero Content */}
-      <div id='home' className="flex  flex-col lg:flex-row items-center justify-center py-10 gap-8 px-2 md:px-12 lg:gap-48 lg:px-[80px] lg:py-16 relative">
+      <div id='home' className="flex  flex-col lg:flex-row items-center justify-center py-10 gap-8 px-4 md:px-12 lg:gap-48 lg:px-[80px] lg:py-16 relative">
         
         {/* Left Content */}
         <div className=" flex flex-1 flex-col md:gap-4 lg:gap-16 text-center lg:text-left lg:pl-[50px] ">
@@ -31,18 +31,18 @@ const Hero = () => {
           
 
           {/* App Buttons */}
-          <div className="flex justify-center lg:justify-start space-x-4 mt-6">
+          <div className="flex md:justify-center flex-col gap-4 md:gap-0 items-center md:flex-row lg:justify-start md:space-x-4 mt-6">
             <img
               src="/assets/google.png"
               alt="Google Play"
-              className={`px-6 py-3 bg-black text-white rounded-xl shadow-lg transform transition-transform duration-700 ${
+              className={`w-40 h-16 md:w-auto md:h-auto object-cover px-2 py-2 md:px-6 md:py-3 bg-black text-white rounded-xl shadow-lg transform transition-transform duration-700 ${
           animate ? "flip-animation" : ""
         }`}
             />
             <img
               src="/assets/apple.png"
               alt="App Store"
-              className={`px-6 py-3 bg-black text-white rounded-xl shadow-lg transform transition-transform duration-700 ${
+              className={`w-40 h-16 md:w-auto  md:h-auto object-cover px-2 py-2 md:px-6 md:py-3 bg-black text-white rounded-xl shadow-lg transform transition-transform duration-700 ${
           animate ? "flip-animation" : ""
         }`}
             />
@@ -60,7 +60,7 @@ const Hero = () => {
             <img
               src="/assets/heroimage2.png"
               alt="Phone 1"
-              className="h-[400px] md:h-[500px] z-20 object-cover"
+              className="h-[300px] md:h-[500px] z-20 object-cover"
             />
            
           </div>

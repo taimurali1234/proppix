@@ -36,12 +36,12 @@ export default function SellApartment() {
       {/* Content */}
       <div className="grid lg:grid-cols-2 gap-10 justify-center lg:items-center mt-16 rounded-2xl p-6 md:p-[60px] bg-[#F6F9F8]">
         {/* Text */}
-        <div className=" flex flex-col  gap-[20px] lg:gap-[30px] text-bodyText max-w-[350px] md:max-w-[400px] lg:max-w-[500px]">
-          <p className="text-base font-medium text-neutral">Com a paypay você</p>
-          <h2 className="text-2xl lg:text-[40px] lg:leading-[42px] font-semibold">
+        <div className=" flex flex-col  gap-[20px] lg:gap-[30px] text-bodyText max-w-[300px] md:max-w-[400px] lg:max-w-[500px]">
+          <p className="text-small md:text-base font-medium text-neutral">Com a paypay você</p>
+          <h2 className="text-xl md:text-2xl lg:text-[40px] lg:leading-[42px] font-semibold">
             Sell Your Apartment or Home with Ease
           </h2>
-          <p className="text-lg lg:text-[22px] font-normal lg:leading-[25px] ">
+          <p className="text-base md:text-lg lg:text-[22px] font-normal lg:leading-[25px] ">
             List your property and reach serious buyers quickly. Our expert team
             guides you through every step, ensuring a smooth and profitable sale.
           </p>

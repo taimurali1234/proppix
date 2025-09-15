@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import ChatWidget from "../../common/ChatWidget";
 
 export default function ContactForm() {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -38,67 +39,77 @@ export default function ContactForm() {
   };
 
   return (
-    <div id="contact" className="relative w-full min-h-screen flex flex-col md:flex-row items-start md:justify-center px-4 md:px-12 lg:px-[180px] py-16 md:py-16 bg-white">
+    <div id="contact" className="relative w-full  flex flex-col  md:flex-row gap-6 items-start md:justify-between px-4 md:px-12 lg:px-[180px] py-16 md:py-16 bg-white">
       {/* Background blur circles */}
       <div className="absolute top-10 left-10 w-40 h-40 bg-cyan-200 rounded-full blur-3xl opacity-60 -z-10"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-cyan-200 rounded-full blur-3xl opacity-60 -z-10"></div>
       
       {/* Left Section - Contact Form */}
-      <div className="w-full md:w-1/2 flex flex-col gap-6 pr-0 md:pr-10">
-        <h2 className="text-xl font-bold text-gray-800">Contact Us</h2>
-        
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="flex gap-4">
+      <div className="rounded-2xl w-full flex-1 text-bodyText  ">
+      {/* Heading */}
+      <h2 className="text-2xl font-bold text-gray-800 mb-6">
+        <span className="text-bodyText">Contact Us</span>
+      </h2>
+
+      <form className="space-y-6">
+        {/* First and Last Name */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium  mb-1">
+              First name
+            </label>
             <input
               type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
               placeholder="First name"
-              className="w-1/2 border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-cyan-400"
-              required
-            />
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              placeholder="Last name"
-              className="w-1/2 border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-cyan-400"
-              required
+              className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200  focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
-          
+
+          <div>
+            <label className="block text-sm font-medium  mb-1">
+              Last name
+            </label>
+            <input
+              type="text"
+              placeholder="Last name"
+              className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200  focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+        </div>
+
+        {/* Email */}
+        <div>
+          <label className="block text-sm font-medium  mb-1">
+            Email
+          </label>
           <input
             type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
             placeholder="Ex JohnDoe214@gmail.com"
-            className="w-full border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-cyan-400"
-            required
+            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200  focus:outline-none focus:ring-2 focus:ring-primary"
           />
-          
+        </div>
+
+        {/* Message */}
+        <div>
+          <label className="block text-sm font-medium  mb-1">
+            What can we help you with ?
+          </label>
           <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Type here your message"
             rows="4"
-            className="w-full border rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-cyan-400"
-            required
-          ></textarea>
-          
-          
-          
-          <button 
-            type="submit"
-            className="w-fit md:w-full lg:w-fit bg-cyan-500 hover:bg-cyan-600 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200"
-          >
-            Join our mailing list
-          </button>
-        </form>
-      </div>
+            placeholder="Type here your message"
+            className="w-full px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+          />
+        </div>
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-full bg-primary text-white font-semibold py-3 rounded-lg shadow-md hover:bg-primary/90 transition"
+        >
+          join mailing list
+        </button>
+      </form>
+    </div>
       
       {/* Right Section - Map + Address */}
       <div className="w-full md:w-1/2 flex flex-col mt-10 md:mt-0">
@@ -117,83 +128,19 @@ export default function ContactForm() {
         </p>
       </div>
       
-      {/* Chat Modal */}
-      {isChatOpen && (
-        <div className="absolute bottom-[120px] right-6 w-80 h-[480px] bg-white shadow-xl rounded-xl border flex flex-col overflow-hidden">
-          {/* Header */}
-          <div className="flex items-center justify-between bg-cyan-500 text-white px-4 py-3">
-            <div className="flex items-center gap-2">
-              <div className="bg-white rounded-full p-1">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-                  alt="Logo"
-                  className="w-6 h-6"
-                />
-              </div>
-              <div>
-                <h3 className="font-semibold">Property</h3>
-                <p className="text-xs">AI Bot</p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Chat Content */}
-          <div className="flex-1 p-3 overflow-y-auto space-y-3 text-sm">
-            <div className="bg-cyan-100 text-gray-800 p-2 rounded-lg w-fit">
-              What makes your platform different from other real estate
-              services?
-            </div>
-            <div className="bg-gray-100 p-3 rounded-lg text-gray-700">
-              A: We combine verified listings, expert market insights, and
-              seamless transaction support to provide a secure, reliable, and
-              efficient property experience.
-              <br />
-              <span className="text-xs text-gray-500">
-                Source: Documentation
-              </span>
-            </div>
-            <div className="bg-cyan-100 text-gray-800 p-2 rounded-lg w-fit ml-auto">
-              That helped! Can you do it just for me?
-            </div>
-            <div className="flex items-center gap-2 text-gray-500 text-xs">
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-                alt="Thinking"
-                className="w-4 h-4"
-              />
-              Thinking...
-            </div>
-          </div>
-          
-          {/* Input */}
-          <div className="p-2 border-t flex gap-2">
-            <input
-              type="text"
-              placeholder="Type a reply..."
-              className="flex-1 border rounded-md px-3 py-2 outline-none"
-            />
-            <button className="bg-cyan-500 text-white px-4 py-2 rounded-md">
-              Send
-            </button>
-          </div>
-        </div>
-      )}
-      
-      {/* Floating Button */}
-      <button
-        onClick={() => setIsChatOpen(!isChatOpen)}
-        className="absolute bottom-1 right-1 md:bottom-6 md:right-6 bg-primary flex items-center justify-center hover:bg-cyan-600 text-white rounded-full p-4 md:p-6 shadow-lg"
-      >
-        {isChatOpen ? (
-          <FiChevronDown size={24} />
-        ) : (
-          <img
-            src="/assets/chatlogo.png"
-            alt=""
-            className="w-[40px] h-[40px] object-cover"
-          />
-        )}
-      </button>
+     {isChatOpen && <ChatWidget onClose={() => setIsChatOpen(false)} />}
+
+{/* Floating Button */}
+<button
+  onClick={() => setIsChatOpen(!isChatOpen)}
+  className="absolute bottom-1 right-1 lg:bottom-8 lg:right-12 bg-primary flex items-center justify-center hover:bg-cyan-600 text-white rounded-full p-4 md:p-6 shadow-lg"
+>
+  {isChatOpen ? (
+    <FiChevronDown size={24} />
+  ) : (
+    <img src="/assets/chatlogo.png" alt="" className="w-[40px] h-[40px] object-cover" />
+  )}
+</button>
     </div>
   );
 }

@@ -56,12 +56,12 @@ export default function RentApartment() {
         </div>
 
         {/* Text */}
-        <div className="flex flex-col  gap-[20px] lg:gap-[30px] text-bodyText  max-w-[400px] lg:max-w-[500px]">
-          <p className="text-base font-medium text-neutral">Com a paypay você</p>
-          <h2 className="text-2xl lg:text-[40px] lg:leading-[42px] font-semibold">
+        <div className="flex flex-col  gap-[20px] lg:gap-[30px] text-bodyText max-w-[300px]  md:max-w-[400px] lg:max-w-[500px]">
+          <p className="text-small md:text-base font-medium text-neutral">Com a paypay você</p>
+          <h2 className="text-xl md:text-2xl lg:text-[40px] lg:leading-[42px] font-semibold">
             Find Your Perfect Home to Rent
           </h2>
-          <p className="text-lg lg:text-[22px] font-normal lg:leading-[25px] ">
+          <p className="text-base md:text-lg lg:text-[22px] font-normal lg:leading-[25px] ">
             Browse thousands of verified rental properties that fit your lifestyle and budget. From
             cozy apartments to spacious houses, we make renting simple, fast, and stress-free.
           </p>
