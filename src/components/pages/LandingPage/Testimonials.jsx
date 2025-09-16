@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="w-full bg-gray-50 py-16 px-4 md:px-12 lg:px-[180px]">
+    <section className="w-full bg-gray-50 py-16 px-6   md:px-12 lg:px-[180px]">
       {/* Heading */}
       <h2 className="text-2xl px-[50px] md:px-[0px] md:text-3xl lg:text-4xl font-bold text-center mb-12">
         Trusted by Home Buyers & Sellers
@@ -41,7 +41,7 @@ export default function Testimonials() {
         {testimonials.map((t) => (
           <div
             key={t.id}
-            className={`rounded-xl shadow-md px-12 py-6 gap-6 flex flex-col justify-between transition duration-300 
+            className={`rounded-xl shadow-md px-6 md:px-12 py-6 gap-6 flex flex-col justify-between transition duration-300 
             ${
               t.highlight
                 ? "bg-bodyText text-white hover:bg-bodyText"

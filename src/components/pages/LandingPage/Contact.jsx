@@ -39,13 +39,13 @@ export default function ContactForm() {
   };
 
   return (
-    <div id="contact" className="relative w-full  flex flex-col  md:flex-row gap-6 items-start md:justify-between px-4 md:px-12 lg:px-[180px] py-16 md:py-16 bg-white">
+    <div id="contact" className="relative w-full  flex flex-col  md:flex-row gap-6 items-start md:justify-between px-6 md:px-12 lg:px-[180px] py-16 md:py-16 bg-white">
       {/* Background blur circles */}
       <div className="absolute top-10 left-10 w-40 h-40 bg-cyan-200 rounded-full blur-3xl opacity-60 -z-10"></div>
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-cyan-200 rounded-full blur-3xl opacity-60 -z-10"></div>
       
       {/* Left Section - Contact Form */}
-      <div className="rounded-2xl w-full flex-1 text-bodyText  ">
+      <div className="rounded-2xl w-full lg:pr-[150px] flex-1 text-bodyText  ">
       {/* Heading */}
       <h2 className="text-2xl font-bold text-gray-800 mb-6">
         <span className="text-bodyText">Contact Us</span>
@@ -138,7 +138,7 @@ export default function ContactForm() {
   {isChatOpen ? (
     <FiChevronDown size={24} />
   ) : (
-    <img src="/assets/chatlogo.png" alt="" className="w-[40px] h-[40px] object-cover" />
+    <img src="/assets/chatlogo.png" alt="" className="h-6 w-6 md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] object-cover" />
   )}
 </button>
     </div>

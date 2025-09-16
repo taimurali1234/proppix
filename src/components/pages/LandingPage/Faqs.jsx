@@ -38,7 +38,7 @@ export default function FAQS() {
 
   return (
     <div id="faq" className="w-full px-6 py-16 md:px-12 lg:px-[180px]">
-      <h2 className="text-3xl md:leading-[34px] text-center lg:text-left lg:text-[50px] lg:leading-[50px] font-bold mb-12 md:mb-16 lg:mb-8 lg:max-w-[480px]">Frequently Asked Questions</h2>
+      <h2 className="text-xl md:text-3xl md:leading-[34px] text-center lg:text-left lg:text-[50px] lg:leading-[50px] font-bold mb-12 md:mb-16 lg:mb-8 lg:max-w-[480px]">Frequently Asked Questions</h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         {/* Left Side FAQs */}
@@ -79,7 +79,7 @@ export default function FAQS() {
           <p className="text-gray-600 text-sm mb-6 leading-[22px] px-[30px]">
             End-to-end payments and financial management in a single solution. Meet the right platform to help realize.
           </p>
-          <button className="bg-primary mt-12 w-[337px] max-w-[300px] hover:bg-teal-500 text-white font-medium px-6 py-3  ">
+          <button className="bg-primary mt-12 md:w-[337px] max-w-[300px] hover:bg-teal-500 text-white font-medium px-6 py-3  ">
             Shoot a Direct Mail
           </button>
         </div>

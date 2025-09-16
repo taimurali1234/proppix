@@ -7,35 +7,35 @@ export default function RentApartment() {
     <section className="w-full lg:py-16 px-4 md:px-12 lg:px-[130px]">
       {/* Steps */}
       <div className="flex flex-col lg:flex-row lg:items-center  gap-14 mb-10 lg:pl-[60px]">
-        <p className=" lg:hidden  text-3xl lg:text-2xl font-normal text-bodyText text-center lg:max-w-[150px]">
+        <p className=" lg:hidden text-xl md:text-3xl lg:text-2xl font-normal text-bodyText text-center lg:max-w-[150px]">
           Join as a Buyer Steps
         </p>
 
-        <div className="flex flex-wrap  gap-6 lg:flex-nowrap lg:gap-8">
+        <div className="grid grid-cols-2 gap-6 md:gap-8 lg:grid-cols-4">
           {/* Steps with icons */}
-          <div className="flex items-center gap-6 ">
+          <div className="flex items-center gap-4 md:gap-6 ">
             <div className="bg-primary p-2 md:p-4 lg:p-6 rounded-lg">
-              <img src="/assets/Truck.png" alt="" className="w-10 h-10 object-cover" />
+              <img src="/assets/Truck.png" alt="" className="w-8 h-8 md:w-10 md:h-10  object-cover" />
             </div>
-            <span>List Property</span>
+            <span className="text-xs md:text-base">List Property</span>
           </div>
-          <div className="flex items-center gap-6 ">
+          <div className="flex items-center gap-4 md:gap-6 ">
             <div className="bg-primary p-2 md:p-4 lg:p-6 rounded-lg">
-              <img src="/assets/Two-User.png" alt="" className="w-10 h-10 object-cover" />
+              <img src="/assets/Two-User.png" alt="" className="w-8 h-8 md:w-10 md:h-10  object-cover" />
             </div>
-            <span>Attract Buyers</span>
+            <span className="text-xs md:text-base">Attract Buyers</span>
           </div>
-          <div className="flex items-center gap-6 ">
+          <div className="flex items-center gap-4 md:gap-6">
             <div className="bg-primary p-2 md:p-4 lg:p-6 rounded-lg">
-              <img src="/assets/bank 2.png" alt="" className="w-10 h-10 object-cover" />
+              <img src="/assets/bank 2.png" alt="" className="w-8 h-8 md:w-10 md:h-10  object-cover" />
             </div>
-            <span>Review Offers</span>
+            <span className="text-xs md:text-base">Review Offers</span>
           </div>
-          <div className="flex items-center gap-6 ">
+          <div className="flex items-center gap-4 md:gap-6 ">
             <div className="bg-primary p-2 md:p-4 lg:p-6 rounded-lg">
-              <img src="/assets/closedeal.png" alt="" className="w-10 h-10 object-cover" />
+              <img src="/assets/closedeal.png" alt="" className="w-8 h-8 md:w-10 md:h-10  object-cover" />
             </div>
-            <span>Finalize Sale</span>
+            <span className="text-xs md:text-base">Finalize Sale</span>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ export default function RentApartment() {
       </div>
 
       {/* Content */}
-      <div className="grid lg:grid-cols-2 gap-10 justify-center lg:items-center mt-16 rounded-2xl p-[60px] ">
+      <div className="grid lg:grid-cols-2 gap-10 justify-center lg:items-center mt-16 rounded-2xl p-6 md:p-[60px] ">
         {/* Image */}
         <div>
           <img
@@ -68,11 +68,11 @@ export default function RentApartment() {
           <div className="flex gap-4">
             <button
               onClick={() => setShowPopup(true)}
-              className="bg-primary w-[200px] max-w-[200px] text-white px-6 py-2 rounded-lg hover:bg-teal-600"
+              className="bg-primary text-xs md:text-base md:w-[200px] max-w-[200px] text-white px-6 py-2 rounded-lg hover:bg-teal-600"
             >
               Book Now
             </button>
-            <button className="bg-transparent border-[2px] w-[200px] max-w-[200px] border-primary text-bodyText font-semibold px-6 py-2 rounded-lg hover:bg-gray-50">
+            <button className="bg-transparent text-xs md:text-base border-[2px] md:w-[200px] max-w-[200px] border-primary text-bodyText font-semibold px-6 py-2 rounded-lg hover:bg-gray-50">
               Schedule a Visit
             </button>
           </div>

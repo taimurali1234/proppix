@@ -4,31 +4,31 @@ export default function SellApartment() {
     <section className="w-full px-4  py-16 md:px-12 lg:px-[130px] ">
       {/* Steps */}
       <div className="flex flex-col lg:flex-row lg:items-center  gap-14 mb-10 lg:pl-[60px]">
-        <p className=" text-3xl lg:text-2xl font-normal text-bodyText text-center lg:max-w-[150px]">Join as a Seller Steps</p>
-        <div className="flex flex-wrap  gap-6 lg:flex-nowrap lg:gap-8">
+        <p className=" text-xl md:text-3xl lg:text-2xl font-normal text-bodyText text-center lg:max-w-[150px]">Join as a Seller Steps</p>
+        <div className="grid grid-cols-2 gap-6 md:gap-8 lg:grid-cols-4">
           <div className="flex items-center gap-6 ">
             <div className="bg-primary p-2 md:p-4 lg:p-6 rounded-lg">
-              <img src="/assets/Truck.png" alt="" className="w-10 h-10 object-cover"/>
+              <img src="/assets/Truck.png" alt="" className="w-6 h-6 md:w-10 md:h-10  object-cover"/>
             </div>
-             <span>Browse Listings</span>
+             <span className="text-xs md:text-base">Browse Listings</span>
           </div>
           <div className="flex items-center gap-6 ">
             <div className="bg-primary p-2 md:p-4 lg:p-6 rounded-lg">
-              <img src="/assets/Two-User.png" alt="" className="w-10 h-10 object-cover"/>
+              <img src="/assets/Two-User.png" alt="" className="w-6 h-6 md:w-10 md:h-10 object-cover"/>
             </div>
-             <span>Schedule Visit</span>
+             <span className="text-xs md:text-base">Schedule Visit</span>
           </div>
-          <div className="flex items-center gap-6 ">
+          <div className="flex items-center gap-6">
             <div className="bg-primary p-2 md:p-4 lg:p-6 rounded-lg">
-              <img src="/assets/bank 2.png" alt="" className="w-10 h-10 object-cover"/>
+              <img src="/assets/bank 2.png" alt="" className="w-6 h-6 md:w-10 md:h-10  object-cover"/>
             </div>
-             <span>Make Offer</span>
+             <span className="text-xs md:text-base">Make Offer</span>
           </div>
            <div className="flex items-center gap-6 ">
             <div className="bg-primary p-2 md:p-4 lg:p-6 rounded-lg">
-              <img src="/assets/closedeal.png" alt="" className="w-10 h-10 object-cover"/>
+              <img src="/assets/closedeal.png" alt="" className="w-6 h-6 md:w-10 md:h-10  object-cover"/>
             </div>
-             <span>Close Deal</span>
+             <span className="text-xs md:text-base">Close Deal</span>
           </div>
         </div>
       </div>
@@ -46,10 +46,10 @@ export default function SellApartment() {
             guides you through every step, ensuring a smooth and profitable sale.
           </p>
           <div className="flex gap-4">
-            <button className="bg-primary w-[200px] max-w-[200px] text-white px-6 py-2 rounded-lg hover:bg-teal-600">
+            <button className="bg-primary text-xs md:text-base md:w-[200px] max-w-[200px] text-white px-6 py-2 rounded-lg hover:bg-teal-600">
               Sell Now
             </button>
-            <button className="bg-transparent border-[2px] w-[200px] max-w-[200px] border-primary text-bodyText font-semibold px-6 py-2 rounded-lg hover:bg-gray-50">
+            <button className="bg-transparent text-xs md:text-base border-[2px] md:w-[200px] max-w-[200px] border-primary text-bodyText font-semibold px-6 py-2 rounded-lg hover:bg-gray-50">
               Request Quote
             </button>
           </div>

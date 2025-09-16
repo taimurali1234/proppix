@@ -21,28 +21,28 @@ const Hero = () => {
         {/* Left Content */}
         <div className=" flex flex-1 flex-col md:gap-4 lg:gap-16 text-center lg:text-left lg:pl-[50px] ">
           <div className='flex flex-col gap-2'>
-           <h1 className="text-secondary text-4xl leading-[38px] md:text-5xl md:leading-[52px]  lg:text-[60px] lg:leading-[72px]  font-semibold">
+           <h1 className="text-secondary text-3xl md:text-4xl leading-[38px] lg:text-5xl md:leading-[52px]  lg:text-[60px] lg:leading-[72px]  font-semibold">
   Find your dream <br /> At Proppix
 </h1>
-          <p className="text-white text-xl md:text-3xl mt-4 max-w-lg">
+          <p className="text-white text-lg px-5 md:px-[50px] lg:px-[0px] md:text-3xl md:leading-[40px] mt-4 max-w-lg">
             The fastest way to buy, sell, or rent homes
           </p>
           </div>
           
 
           {/* App Buttons */}
-          <div className="flex md:justify-center flex-col gap-4 md:gap-0 items-center md:flex-row lg:justify-start md:space-x-4 mt-6">
+          <div className="flex justify-center  gap-4 md:gap-0 items-center flex-row lg:justify-start md:space-x-4 mt-6">
             <img
               src="/assets/google.png"
               alt="Google Play"
-              className={`w-40 h-16 md:w-auto md:h-auto object-cover px-2 py-2 md:px-6 md:py-3 bg-black text-white rounded-xl shadow-lg transform transition-transform duration-700 ${
+              className={`w-[120px] h-14 md:w-auto md:h-auto object-fit px-2 py-2 md:px-6 md:py-3 bg-black text-white rounded-xl shadow-lg transform transition-transform duration-700 ${
           animate ? "flip-animation" : ""
         }`}
             />
             <img
               src="/assets/apple.png"
               alt="App Store"
-              className={`w-40 h-16 md:w-auto  md:h-auto object-cover px-2 py-2 md:px-6 md:py-3 bg-black text-white rounded-xl shadow-lg transform transition-transform duration-700 ${
+              className={`w-[120px] h-14 md:w-auto  md:h-auto object-fit px-2 py-2 md:px-6 md:py-3 bg-black text-white rounded-xl shadow-lg transform transition-transform duration-700 ${
           animate ? "flip-animation" : ""
         }`}
             />
